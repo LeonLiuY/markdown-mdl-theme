@@ -1,0 +1,23 @@
+{
+  "name": "markdown-mdl-theme",
+  "version": "0.0.1",
+  "description": "Markdown theme using Google's Material Design Lite",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyang1204/markdown-mdl-theme.git"
+  },
+  "keywords": [
+    "Material Design",
+    "Markdown"
+  ],
+  "author": "Liu Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuyang1204/markdown-mdl-theme/issues"
+  },
+  "homepage": "https://github.com/liuyang1204/markdown-mdl-theme#readme"
+}

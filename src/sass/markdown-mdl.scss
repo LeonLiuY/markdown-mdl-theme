@@ -2,7 +2,7 @@
 @import '$mdl/mixins';
 
 pre {
-    font-family: 'Roboto Mono';
+    font-family: 'Roboto Mono' monospace;
     @include shadow-2dp();
     padding: 8px;
 }

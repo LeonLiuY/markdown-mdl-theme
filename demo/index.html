@@ -35,8 +35,10 @@
 
         <script charset="utf-8">
             marked.setOptions({
-                highlight: function (code) {
-                    return hljs.highlightAuto(code).value;
+                highlight: function (code, lang) {
+                    if(lang && hljs.getLanguage(lang)) {
+                        return hljs.highlight(lang, code).value;
+                    }
                 }
             });
 

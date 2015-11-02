@@ -1,3 +1,8 @@
-code {
+@import '$mdl/variables';
+@import '$mdl/mixins';
+
+pre {
     font-family: 'Roboto Mono';
+    @include shadow-2dp();
+    padding: 8px;
 }

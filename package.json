@@ -20,9 +20,11 @@
     "url": "https://github.com/liuyang1204/markdown-mdl-theme/issues"
   },
   "homepage": "https://github.com/liuyang1204/markdown-mdl-theme#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.1.0",
     "material-design-lite": "^1.0.5"
   }
 }

@@ -3,8 +3,12 @@
     <head>
         <title>Markdown MDL Theme</title>
         <script src="lib/marked.js"></script>
+        <script src="lib/highlight.pack.js"></script>
         <link rel="stylesheet" href="css/roboto.css">
+        <link rel="stylesheet" href="css/roboto-mono.css">
         <link rel="stylesheet" href="/node_modules/material-design-lite/dist/material.css" >
+        <link rel="stylesheet" href="css/highlight-github-gist.css">
+        <link rel="stylesheet" href="/build/css/markdown-mdl.css">
         <style >
             body {
                 position: absolute;
@@ -25,6 +29,12 @@
         </style>
 
         <script charset="utf-8">
+            marked.setOptions({
+                highlight: function (code) {
+                    return hljs.highlightAuto(code).value;
+                }
+            });
+
             function render(e) {
                 document.getElementById('view').innerHTML = marked(document.getElementById('editor').value);
             }

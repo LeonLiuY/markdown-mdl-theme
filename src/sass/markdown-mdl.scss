@@ -2,10 +2,17 @@
 @import '$mdl/mixins';
 
 .markdown-body{
+    code {
+        font-family: 'Roboto Mono' monospace;
+        background-color: rgba(0,0,0,0.12);
+    }
     pre {
         font-family: 'Roboto Mono' monospace;
         @include shadow-2dp();
         padding: 8px;
+    }
+    pre code {
+        background-color: transparent;
     }
     li > p {
         margin-top: 16px;

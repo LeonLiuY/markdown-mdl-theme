@@ -6,3 +6,17 @@ pre {
     @include shadow-2dp();
     padding: 8px;
 }
+
+blockquote {
+    margin: 0;
+    padding: 0 16px;
+    border-left: 4px solid rgba(0,0,0,0.12);
+    color: rgba(0,0,0,0.54);
+    &:before {
+        content: none;
+    }
+
+    &:after {
+        content: none;
+    }
+}

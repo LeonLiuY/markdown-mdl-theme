@@ -29,7 +29,6 @@ function npmModule(url, file, done) {
             });
         } else {
             aliases[url] = url;
-            gutil.log(newPath);
             return done({
                 file: url
             });

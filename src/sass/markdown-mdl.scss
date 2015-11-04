@@ -1,24 +1,93 @@
 @import '$mdl/variables';
 @import '$mdl/mixins';
 
-pre {
-    font-family: 'Roboto Mono' monospace;
-    @include shadow-2dp();
-    padding: 8px;
-}
-li > p {
-    margin-top: 16px;
-}
-blockquote {
-    margin: 0;
-    padding: 0 16px;
-    border-left: 4px solid rgba(0,0,0,0.12);
-    color: rgba(0,0,0,0.54);
-    &:before {
-        content: none;
+.markdown-body{
+    pre {
+        font-family: 'Roboto Mono' monospace;
+        @include shadow-2dp();
+        padding: 8px;
+    }
+    li > p {
+        margin-top: 16px;
+    }
+    blockquote {
+        margin: 0;
+        padding: 0 16px;
+        border-left: 4px solid rgba(0,0,0,0.12);
+        color: rgba(0,0,0,0.54);
+        &:before {
+            content: none;
+        }
+
+        &:after {
+            content: none;
+        }
     }
 
-    &:after {
-        content: none;
+    table {
+        @include shadow-2dp();
+    }
+
+    //copied from mdl _data-table.scss
+    table {
+      position: relative;
+      border: $data-table-dividers;
+      border-collapse: collapse;
+      white-space: nowrap;
+      font-size: $data-table-font-size;
+      background-color: unquote("rgb(#{$color-white})");
+
+      thead {
+        padding-bottom: 3px;
+      }
+
+      tbody {
+        tr {
+          position: relative;
+          height: $data-table-row-height;
+          @include material-animation-default(0.28s);
+          transition-property: background-color;
+          &:hover {
+            background-color: $data-table-hover-color;
+          }
+        }
+      }
+
+      td, th {
+        padding: 0 $data-table-column-padding 0 $data-table-column-padding;
+        text-align: right;
+
+        &:first-of-type {
+          padding-left: 24px;
+        }
+
+        &:last-of-type {
+          padding-right: 24px;
+        }
+      }
+
+      td {
+        position: relative;
+        vertical-align: top;
+        height: $data-table-row-height;
+        border-top: $data-table-dividers;
+        border-bottom: $data-table-dividers;
+        padding-top: $data-table-cell-top;
+        box-sizing: border-box;
+
+      }
+
+      th {
+        position: relative;
+        vertical-align: bottom;
+        text-overflow: ellipsis;
+        @include typo-body-2();
+        height: $data-table-row-height;
+        font-size: $data-table-header-font-size;
+        color: $data-table-header-color;
+        padding-bottom: 8px;
+        box-sizing: border-box;
+
+      }
     }
 }
